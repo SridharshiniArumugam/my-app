@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import data from "./Data";
 
 function Electronics(){
@@ -10,24 +10,25 @@ function Electronics(){
     return val1+val2;
   }
   
-  /*const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState('');
+
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
-  }*/
+  }
 
     return (
         <>
         <tr>
       <td>Electronics</td>
       <td>{valueadd(data[0].children[0].value , data[0].children[1].value)}</td>
-      <td> <input type="text"  /*value={inputValue} onChange={handleInputChange} */ /></td>
+      <td> <input type="text" value={inputValue} onChange={handleInputChange}  /></td>
       <td><button >calculate%</button></td>
       <td><button >calculate Val</button></td>
       </tr> 
       <tr>
       <td>Phones</td>
       <td>{data[0].children[0].value}</td>
-      <td> <input type="text" /*value={inputValue} onChange={handleInputChange} */ /></td>
+      <td> <input type="text"  /></td>
       <td><button>calculate%</button></td>
       <td><button>calculate Val</button></td>
       <td></td>
@@ -36,7 +37,7 @@ function Electronics(){
       <tr>
       <td>Laptops</td>
       <td>{data[0].children[1].value}</td>
-      <td> <input type="text"  /*value={inputValue} onChange={handleInputChange} */ /></td>
+      <td> <input type="text"/></td>
       <td><button>calculate%</button></td>
       <td><button>calculate Val</button></td>
       <td></td>
